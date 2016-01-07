@@ -1,0 +1,49 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+// Variables
+$primaryColor: #92DAB2;
+$largeMargin: 20px;
+$smallMargin: 10px;
+$headingTextSize: 2.4rem;
+$subheadingTextSize: 2rem;
+$bodyTextSize: 1.6rem;
+
+html {
+	font: {
+		family:"Roboto", sans-serif;
+		size: 10px;
+	}
+}
+
+body {
+	background-color: #f1f2f2;
+}
+
+nav {
+	background-color: $primaryColor;
+	height: 60px;
+
+	#homeLink {
+		display: inline-block;
+		margin-top: 5px;
+		height: 50px;
+		overflow: hidden;
+
+		#logo {
+			width: 50px;
+			float: left;
+			margin-right: $smallMargin;
+		}
+	}
+}
+
+h1 {
+	float: left;
+	font-size: $headingTextSize;
+	line-height: 50px;
+}
