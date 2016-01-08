@@ -6,13 +6,20 @@
 @import "compass/reset";
 
 // Variables
-$primaryColor: #92DAB2;
-$largeMargin: 20px;
-$smallMargin: 10px;
-$headingTextSize: 2.4rem;
-$subheadingTextSize: 2rem;
-$bodyTextSize: 1.6rem;
+	// colors
+	$primaryColor: #92DAB2;
+	$cardBgColor: #e6e6e6;
 
+	//spacing
+	$largeMargin: 20px;
+	$smallMargin: 10px;
+
+	//font sizes
+	$headingTextSize: 2.4rem;
+	$subheadingTextSize: 2rem;
+	$bodyTextSize: 1.6rem;
+
+// Establish font base styles
 html {
 	font: {
 		family:"Roboto", sans-serif;
@@ -20,6 +27,19 @@ html {
 	}
 }
 
+// Text styles
+h1 {
+	float: left;
+	font-size: $headingTextSize;
+	line-height: 50px;
+}
+
+h2 {
+	display: inline-block;
+	font-size: 4rem;
+}
+
+// Main styles
 body {
 	background-color: #f1f2f2;
 }
@@ -27,12 +47,16 @@ body {
 nav {
 	background-color: $primaryColor;
 	height: 60px;
+	padding: 0 2%;
 
 	#homeLink {
-		display: inline-block;
-		margin-top: 5px;
-		height: 50px;
-		overflow: hidden;
+		&:link, &:visited {
+			display: inline-block;
+			color: #777;
+			margin-top: 5px;
+			height: 50px;
+			overflow: hidden;
+		}
 
 		#logo {
 			width: 50px;
@@ -42,8 +66,34 @@ nav {
 	}
 }
 
-h1 {
-	float: left;
-	font-size: $headingTextSize;
-	line-height: 50px;
+#mainWrapper {
+	width: 96%;
+	margin: 0 auto;
+
+	.cardsFlexWrapper {
+		display: -webkit-flex;
+		-webkit-justify-content: space-between;
+		display: flex;
+		justify-content: space-between;
+
+		.cardWrapper {
+			-webkit-flex: 1;
+			flex: 1;
+			max-width: 240px;
+			background-color: $cardBgColor;
+			padding: 10px;
+			box-sizing: border-box;
+
+			.prodImagePlaceholder {
+				width: 220px;
+				height: 220px;
+				background-color: #999;
+			}
+		}
+	}
+}
+
+
+.fa-star, .fa-star-o {
+	color: yellow;
 }
