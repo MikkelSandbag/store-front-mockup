@@ -9,14 +9,15 @@
 	// colors
 	$primaryColor: #92DAB2;
 	$cardBgColor: #e6e6e6;
+	$textColor: #333;
 
 	//spacing
 	$largeMargin: 20px;
 	$smallMargin: 10px;
 
 	//font sizes
+	$titleTextSize: 4rem;
 	$headingTextSize: 2.4rem;
-	$subheadingTextSize: 2rem;
 	$bodyTextSize: 1.6rem;
 
 // Establish font base styles
@@ -25,6 +26,7 @@ html {
 		family:"Roboto", sans-serif;
 		size: 10px;
 	}
+	color: $textColor;
 }
 
 // Text styles
@@ -36,7 +38,19 @@ h1 {
 
 h2 {
 	display: inline-block;
-	font-size: 4rem;
+	font-size: $titleTextSize;
+	margin-bottom: $smallMargin;
+	cursor: default;
+}
+
+h3 {
+	font-size: $headingTextSize;
+	margin: $largeMargin 0 $smallMargin $smallMargin;
+
+	& a:link, & a:visited {
+		color: $textColor;
+		text-decoration: none;
+	}
 }
 
 // Main styles
@@ -44,56 +58,88 @@ body {
 	background-color: #f1f2f2;
 }
 
-nav {
+
+header {
 	background-color: $primaryColor;
-	height: 60px;
-	padding: 0 2%;
 
-	#homeLink {
-		&:link, &:visited {
-			display: inline-block;
-			color: #777;
-			margin-top: 5px;
-			height: 50px;
-			overflow: hidden;
-		}
+	nav {
+		height: 60px;
+		max-width: 1330px;
+		margin: 0 auto;
+		padding: 0 2%;
 
-		#logo {
-			width: 50px;
-			float: left;
-			margin-right: $smallMargin;
-		}
-	}
-}
+		#homeLink {
+			&:link, &:visited {
+				display: inline-block;
+				margin: 5px 0 0 5px;
+				height: 50px;
+				overflow: hidden;
+			}
 
-#mainWrapper {
-	width: 96%;
-	margin: 0 auto;
-
-	.cardsFlexWrapper {
-		display: -webkit-flex;
-		-webkit-justify-content: space-between;
-		display: flex;
-		justify-content: space-between;
-
-		.cardWrapper {
-			-webkit-flex: 1;
-			flex: 1;
-			max-width: 240px;
-			background-color: $cardBgColor;
-			padding: 10px;
-			box-sizing: border-box;
-
-			.prodImagePlaceholder {
-				width: 220px;
-				height: 220px;
-				background-color: #999;
+			#logo {
+				width: 50px;
+				float: left;
+				margin-right: $smallMargin;
 			}
 		}
 	}
 }
 
 
-.fa-star, .fa-star-o {
-	color: yellow;
+#mainWrapper {
+	width: 96%;
+	max-width: 1330px;
+	margin: 0 auto;
+
+	.cardSection {
+		margin-top: $largeMargin;
+
+		.cardsFlexWrapper {
+			display: -webkit-flex;
+			-webkit-justify-content: space-between;
+			display: flex;
+			justify-content: space-between;
+
+			.cardWrapper {
+				-webkit-flex-basis: 24%;
+				flex-basis: 24%;
+				background-color: $cardBgColor;
+				padding: $smallMargin;
+				box-sizing: border-box;
+
+				img {
+					width: 100%;
+				}
+
+				.ratingWrapper {
+					display: inline-block;
+					background-color: #ccc;
+					padding: 3px;
+					margin: 0 0 $largeMargin $smallMargin;
+
+					.fa-star, .fa-star-o {
+						color: #ffe55e;
+						font-size: 1.8rem;
+					}
+
+					& i + * {
+						margin-left: 2px;
+					}
+				}
+
+				p {
+					font-size: $bodyTextSize;
+					line-height: 2.6rem;
+					margin: 0 0 $largeMargin $smallMargin;
+				}
+
+				button {
+					display: block;
+					margin: 0 auto $smallMargin;
+				}
+			}
+		}
+	}
 }
+
+
