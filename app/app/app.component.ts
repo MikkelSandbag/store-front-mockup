@@ -9,19 +9,21 @@ interface Properties {
 @Component({
     selector: 'my-app',
     template: `
-    <section class="cardWrapper" id="fs-card{{propertiesList.id}}">
-        <img id="fs-prodImage{{propertiesList.id}}" src="http://www.prestigespringwater.com/images/coffee/Coffee_Bag_2.jpg" alt="coffee bag">
-        <h3 id="fs-card{{propertiesList.id}}-prodTitle"><a href="#">{{name}}</a></h3>
-        <div class="ratingWrapper" id="fs-ratingWrapper{{propertiesList.id}}">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-        </div>
-        <p id="fs-description{{propertiesList.id}}">{{propertiesList.description}}</p>
-        <button id="fs-moreLink1">More info</button>
-    </section>
+    <div class="cardsFlexWrapper" id="fs-cardsFlexWrapper">
+        <section class="cardWrapper" id="fs-card{{propertiesList.id}}">
+            <img id="fs-prodImage{{propertiesList.id}}" src="http://www.prestigespringwater.com/images/coffee/Coffee_Bag_2.jpg" alt="coffee bag">
+            <h3 id="fs-card{{propertiesList.id}}-prodTitle"><a href="#">{{name}}</a></h3>
+            <div class="ratingWrapper" id="fs-ratingWrapper{{propertiesList.id}}">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p id="fs-description{{propertiesList.id}}">{{propertiesList.description}}</p>
+            <button id="fs-moreLink1">More info</button>
+        </section>
+    </div>
     `
 })
 export class AppComponent {
