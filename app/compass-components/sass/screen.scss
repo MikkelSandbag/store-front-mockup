@@ -46,11 +46,6 @@ h2 {
 h3 {
 	font-size: $headingTextSize;
 	margin: $largeMargin 0 $smallMargin $smallMargin;
-
-	& a:link, & a:visited {
-		color: $textColor;
-		text-decoration: none;
-	}
 }
 
 // Main styles
@@ -106,6 +101,7 @@ header {
 				background-color: $cardBgColor;
 				padding: $smallMargin;
 				box-sizing: border-box;
+				cursor: pointer;
 
 				img {
 					width: 100%;

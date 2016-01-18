@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, C:/Users/Mikkel/Desktop/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, C:/Program Files (x86)/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Users/Mikkel/Desktop/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, C:/Program Files (x86)/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Users/Mikkel/Desktop/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, C:/Program Files (x86)/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Users/Mikkel/Desktop/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, C:/Program Files (x86)/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Users/Mikkel/Desktop/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, C:/Program Files (x86)/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Users/Mikkel/Desktop/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, C:/Program Files (x86)/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Users/Mikkel/Desktop/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, C:/Program Files (x86)/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Users/Mikkel/Desktop/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, C:/Program Files (x86)/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Users/Mikkel/Desktop/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, C:/Program Files (x86)/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -94,94 +94,90 @@ h3 {
   font-size: 2.4rem;
   margin: 20px 0 10px 10px;
 }
-/* line 50, ../sass/screen.scss */
-h3 a:link, h3 a:visited {
-  color: #333;
-  text-decoration: none;
-}
 
-/* line 57, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 body {
   background-color: #f1f2f2;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 header {
   background-color: #92DAB2;
 }
-/* line 65, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 header nav {
   height: 60px;
   max-width: 1330px;
   margin: 0 auto;
   padding: 0 2%;
 }
-/* line 72, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 header nav #homeLink:link, header nav #homeLink:visited {
   display: inline-block;
   margin: 5px 0 0 5px;
   height: 50px;
   overflow: hidden;
 }
-/* line 79, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 header nav #homeLink #logo {
   width: 50px;
   float: left;
   margin-right: 10px;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 #mainWrapper {
   width: 96%;
   max-width: 1330px;
   margin: 0 auto;
 }
-/* line 94, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 #mainWrapper .cardSection {
   margin-top: 20px;
 }
-/* line 97, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 #mainWrapper .cardSection .cardsFlexWrapper {
   display: -webkit-flex;
   -webkit-justify-content: space-between;
   display: flex;
   justify-content: space-between;
 }
-/* line 103, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 #mainWrapper .cardSection .cardsFlexWrapper .cardWrapper {
   -webkit-flex-basis: 24%;
   flex-basis: 24%;
   background-color: #e6e6e6;
   padding: 10px;
   box-sizing: border-box;
+  cursor: pointer;
 }
-/* line 110, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 #mainWrapper .cardSection .cardsFlexWrapper .cardWrapper img {
   width: 100%;
 }
-/* line 114, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 #mainWrapper .cardSection .cardsFlexWrapper .cardWrapper .ratingWrapper {
   display: inline-block;
   background-color: #ccc;
   padding: 3px;
   margin: 0 0 20px 10px;
 }
-/* line 120, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 #mainWrapper .cardSection .cardsFlexWrapper .cardWrapper .ratingWrapper .fa-star, #mainWrapper .cardSection .cardsFlexWrapper .cardWrapper .ratingWrapper .fa-star-o {
   color: #ffe55e;
   font-size: 1.8rem;
 }
-/* line 125, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 #mainWrapper .cardSection .cardsFlexWrapper .cardWrapper .ratingWrapper i + * {
   margin-left: 2px;
 }
-/* line 130, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 #mainWrapper .cardSection .cardsFlexWrapper .cardWrapper p {
   font-size: 1.6rem;
   line-height: 2.6rem;
   margin: 0 0 20px 10px;
 }
-/* line 136, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 #mainWrapper .cardSection .cardsFlexWrapper .cardWrapper button {
   display: block;
   margin: 0 auto 10px;

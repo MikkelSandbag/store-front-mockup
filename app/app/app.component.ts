@@ -1,36 +1,51 @@
 import {Component} from 'angular2/core';
-
-interface Properties {
-	id: number;
-	description: string;
-    rating: number;
-}
+import {OnInit} from 'angular2/core';
+import {Product} from './product';
+import {ProductDetailComponent} from './product-detail.component';
+import {ProductService} from './product.service';
 
 @Component({
-    selector: 'my-app',
-    template: `
-    <div class="cardsFlexWrapper" id="fs-cardsFlexWrapper">
-        <section class="cardWrapper" id="fs-card{{propertiesList.id}}">
-            <img id="fs-prodImage{{propertiesList.id}}" src="http://www.prestigespringwater.com/images/coffee/Coffee_Bag_2.jpg" alt="coffee bag">
-            <h3 id="fs-card{{propertiesList.id}}-prodTitle"><a href="#">{{name}}</a></h3>
-            <div class="ratingWrapper" id="fs-ratingWrapper{{propertiesList.id}}">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-            </div>
-            <p id="fs-description{{propertiesList.id}}">{{propertiesList.description}}</p>
-            <button id="fs-moreLink1">More info</button>
-        </section>
-    </div>
-    `
+  selector: 'my-app',
+  template: `
+  <div class="cardsFlexWrapper" id="fs-cardsFlexWrapper">
+    <section *ngFor="#product of products" 
+      (click)="onSelect(product)"
+      [class.selected] = "product === selectedProduct" class="cardWrapper" id="fs-card{{product.id}}">
+      <img id="fs-prodImage{{product.id}}" src="http://www.prestigespringwater.com/images/coffee/Coffee_Bag_2.jpg" alt="coffee bag">
+      <h3 id="fs-card{{product.id}}-prodTitle">{{product.name}}</h3>
+      <div class="ratingWrapper" id="fs-ratingWrapper{{product.id}}">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+      <p id="fs-description{{product.id}}">{{product.description}}</p>
+      <button id="fs-moreLink1">More info</button>
+    </section>
+  </div>
+
+  <product-detail [product]="selectedProduct"></product-detail>
+  `,
+  inputs: ['product'],
+  directives: [ProductDetailComponent],
+  providers: [ProductService]
 })
-export class AppComponent {
-    public name = "Bag o' Coffee";
-    public propertiesList: Properties {
-        id: 1,
-        description: "You're only supposed to blow the bloody doors off! you wouldn't hit a man with no trousers on, would you? brain freeze. alrighty then yes, i used a machine gun. kinda hot in these rhinos. here she comes to wreck the day. i took a viagra, got stuck in me throat, i've had a stiff neck for hours. we're going for a ride on the information super highway. excuse me, i'd like to ass you a few questions. your entrance was good, his was better. good morning, oh in case i don't see you, good afternoon, good evening and goodnight.",
-        rating: 4
-    };
+
+export class AppComponent implements OnInit {
+  public title = 'The Coffee Shoppe';
+  public products: Product[];
+  public selectedProduct: Product;
+
+  constructor(private _productService: ProductService) { }
+
+  getProducts() {
+    this._productService.getProducts().then(products => this.products = products);
+  }
+
+  ngOnInit() {
+    this.getProducts();
+  }
+
+  onSelect(product: Product) { this.selectedProduct = product; }
 }
