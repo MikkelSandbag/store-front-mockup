@@ -38,7 +38,7 @@ System.register(['angular2/core', './product-detail.component', './product.servi
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n  <div class=\"cardsFlexWrapper\" id=\"fs-cardsFlexWrapper\">\n    <section *ngFor=\"#product of products\" \n      (click)=\"onSelect(product)\"\n      [class.selected] = \"product === selectedProduct\" class=\"cardWrapper\" id=\"fs-card{{product.id}}\">\n      <img id=\"fs-prodImage{{product.id}}\" src=\"http://www.prestigespringwater.com/images/coffee/Coffee_Bag_2.jpg\" alt=\"coffee bag\">\n      <h3 id=\"fs-card{{product.id}}-prodTitle\">{{product.name}}</h3>\n      <div class=\"ratingWrapper\" id=\"fs-ratingWrapper{{product.id}}\">\n        <i class=\"fa fa-star\"></i>\n        <i class=\"fa fa-star\"></i>\n        <i class=\"fa fa-star\"></i>\n        <i class=\"fa fa-star\"></i>\n        <i class=\"fa fa-star-o\"></i>\n      </div>\n      <p id=\"fs-description{{product.id}}\">{{product.description}}</p>\n      <button id=\"fs-moreLink1\">More info</button>\n    </section>\n  </div>\n\n  <product-detail [product]=\"selectedProduct\"></product-detail>\n  ",
+                        templateUrl: './app/templates/app.component.html',
                         inputs: ['product'],
                         directives: [product_detail_component_1.ProductDetailComponent],
                         providers: [product_service_1.ProductService]
